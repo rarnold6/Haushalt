@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Einkaufsliste ergänzen"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Neues Element:"/>
+
+        <EditText
+            android:id="@+id/elementEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="z.B. Toilletenpapier" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Anzahl:"/>
+
+
+        <EditText
+            android:id="@+id/anzahlEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="z.B. 2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Einheit:"/>
+
+        <Spinner
+            android:id="@+id/einheit_spinner_einkaufszettel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alternative Einheit: " />
+
+        <EditText
+            android:id="@+id/einheitEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="z.B. Pack" />
+        <Button
+            android:id="@+id/zum_einkaufszettel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text = "Fertig"/>
+
+
+</LinearLayout>

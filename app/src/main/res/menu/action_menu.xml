@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_add_element"
+        android:icon="@drawable/ic_add"
+        app:showAsAction="ifRoom"
+        android:visible="false"
+        />
+
+    <item
+        android:id="@+id/menu_complete_grocery"
+        android:icon="@mipmap/ic_check_out_grocery"
+        app:showAsAction="ifRoom"
+        android:visible="false"
+        />
+
+    <group
+        android:id="@+id/menu_group">
+        <item
+            android:id="@+id/menu_new_object"
+            android:title="Neues Objekt hinzufügen"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/menu_add_case"
+            android:title="Neues Fach hinzufügen"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/menu_object_settings"
+            android:icon="@drawable/ic_edit"
+            android:title="Gefrierschrankeinstellungen"
+            app:showAsAction="ifRoom" />
+    </group>
+
+
+</menu>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Objektsname"
+            android:textSize="15dp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/essensnameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="z.B. Schweinebraten"
+            android:completionThreshold="1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Anzahl"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/anzahlEdit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="z.B. 300"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Einheit"
+            android:textSize="15dp"/>
+
+        <Spinner
+            android:padding="8dp"
+            android:id="@+id/einheit_spinner_gefrierschrank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="15dp"
+            android:visibility="gone"
+            android:id="@+id/einheit_hinzufuegen"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kategorie"
+            android:textSize="15dp"/>
+
+        <Spinner
+            android:padding="8dp"
+            android:id="@+id/spinner_kategorien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="15dp"
+            android:visibility="gone"
+            android:id="@+id/kategorie_hinzufuegen"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/definiere_haltbarkeit"
+            android:id="@+id/durabilityCheckEdit"
+            android:checked="true" />
+
+        <GridLayout
+            android:id="@+id/grid_durability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:columnCount="3"
+            android:rowCount="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:gravity="center_horizontal"
+                android:text="@string/jahre" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/monate"/>
+
+            <TextView
+                android:layout_columnWeight="1"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/tage"/>
+
+            <EditText
+                android:id="@+id/durability_years"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_horizontal"
+                android:text="00"
+                android:inputType="number"
+                android:maxLength="2"/>
+
+            <EditText
+                android:id="@+id/durability_months"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_horizontal"
+                android:text="00"
+                android:inputType="number"
+                android:maxLength="2"/>
+
+            <EditText
+                android:id="@+id/durability_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="00"
+                android:layout_gravity="center_horizontal"
+                android:inputType="number"
+                android:maxLength="2"/>
+
+        </GridLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/einfuegenButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="weiteres einfügen" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/einfuegenUndAbschliessen"
+                android:text="Einfügen&#10;&amp;&#10;Abschließen"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/zumNaechstenFacheinfuegen"
+                android:text="Nächstes Fach befüllen"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

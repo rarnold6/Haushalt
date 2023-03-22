@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical">
+
+
+    <ScrollView android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textFolgendesEinraumen"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textFolgendesEinraumen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Folgendes einräumen" />
+
+            <LinearLayout
+                android:id="@+id/list_einkauf_abschliessen"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Elemente, die eingekauft wurden und auch noch eingeraeumt werden sollen:"/>
+
+                <Spinner
+                    android:id="@+id/gefrierschrank_einfuege_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+
+        >
+
+        <Button
+            android:id="@+id/einfuegen_button_einkauf_abschliessen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/nichts_einfuegen_button"
+            android:text="Einfügen"
+
+            />
+
+        <Button
+            android:id="@+id/nichts_einfuegen_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/abbrechen_button"
+            android:text="Nichts&#10;einräumen"
+
+            />
+
+        <Button
+            android:id="@+id/abbrechen_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Abbrechen"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+</LinearLayout>
